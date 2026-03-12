@@ -7,17 +7,24 @@
   <meta name="description" content="The Systems Lab of Chase Arenella: AI automation experiments, PBSA frameworks, and productivity systems. A satellite pillar linking back to the core PBSA hub."/>
   <meta name="author" content="Chase Arenella"/>
   <meta name="robots" content="index,follow,max-image-preview:large"/>
+
+  <!-- Canonical (project pages URL is correct) -->
   <link rel="canonical" href="https://carenella1.github.io/chase-systems-lab/"/>
-  <link rel="stylesheet" href="/assets/site.css"/>
+
+  <!-- IMPORTANT: project-pages requires RELATIVE or /chase-systems-lab/... paths -->
+  <link rel="stylesheet" href="assets/site.css"/>
+
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Chase Arenella Systems Lab"/>
   <meta property="og:description" content="The Systems Lab of Chase Arenella: AI automation experiments, PBSA frameworks, and productivity systems. A satellite pillar linking back to the core PBSA hub."/>
   <meta property="og:url" content="https://carenella1.github.io/chase-systems-lab/"/>
   <meta property="og:image" content="https://carenella1.github.io/chase-systems-lab/assets/images/chase-systems-lab-hero-01.jpg"/>
+
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Chase Arenella Systems Lab"/>
   <meta name="twitter:description" content="The Systems Lab of Chase Arenella: AI automation experiments, PBSA frameworks, and productivity systems. A satellite pillar linking back to the core PBSA hub."/>
   <meta name="twitter:image" content="https://carenella1.github.io/chase-systems-lab/assets/images/chase-systems-lab-hero-01.jpg"/>
+
   <script type="application/ld+json">
 [
   {
@@ -67,6 +74,7 @@
 ]
   </script>
 </head>
+
 <body>
   <div class="container">
     <div class="topbar">
@@ -74,15 +82,16 @@
         <b>Chase Arenella Systems Lab</b>
         <span>AI • Automation • PBSA • Experiments</span>
       </div>
+
+      <!-- FIXED NAV: project-pages needs relative links -->
       <nav>
-        <a href="/index.html">Home</a>
-        <a href="/frameworks.html">Frameworks</a>
-        <a href="/automation.html">Automation</a>
-        <a href="/experiments.html">Experiments</a>
-        <a href="/about.html">About</a>
+        <a href="./">Home</a>
+        <a href="frameworks.html">Frameworks</a>
+        <a href="automation.html">Automation</a>
+        <a href="experiments.html">Experiments</a>
+        <a href="about.html">About</a>
       </nav>
     </div>
-
 
     <section class="hero">
       <div class="card">
@@ -101,15 +110,15 @@
 
         <h2>Start here</h2>
         <div class="grid">
-          <a class="tile" href="/frameworks.html">
+          <a class="tile" href="frameworks.html">
             <h3>Frameworks</h3>
             <p>PBSA, AI Productivity, leadership systems.</p>
           </a>
-          <a class="tile" href="/automation.html">
+          <a class="tile" href="automation.html">
             <h3>Automation</h3>
             <p>Agents, workflows, and deployment patterns.</p>
           </a>
-          <a class="tile" href="/experiments.html">
+          <a class="tile" href="experiments.html">
             <h3>Experiments</h3>
             <p>Logs and iterations from real builds.</p>
           </a>
@@ -129,7 +138,12 @@
 
       <figure class="card">
         <div class="kicker">Featured visual</div>
-        <img src="/assets/images/chase-systems-lab-hero-01.jpg" alt="Chase Arenella — systems lab hero image" loading="lazy"/>
+
+        <!-- FIXED IMG PATH -->
+        <img src="assets/images/chase-systems-lab-hero-01.jpg"
+             alt="Chase Arenella — systems lab hero image"
+             loading="lazy"/>
+
         <p><small>Swap this image after deployment to strengthen image entity clustering.</small></p>
       </figure>
     </section>
@@ -145,14 +159,16 @@
         If you’re looking for identity + media assets, go to the <a href="https://carenella1.github.io/">core hub</a>.
         If you’re looking for systems thinking and automation, this site is the authority layer.
       </p>
+
+      <!-- FIXED MAINTENANCE LINK -->
       <p>
-        Maintenance archive: <a href="/maintenance/index.html">/maintenance</a>
+        Maintenance archive: <a href="maintenance/index.html">/maintenance</a>
       </p>
     </section>
 
     <script>
-      // Displays the latest monthly refresh if the file exists (created by GitHub Actions).
-      fetch('/maintenance/latest.json', {cache: 'no-store'})
+      // FIXED: project-pages needs relative fetch
+      fetch('maintenance/latest.json', {cache: 'no-store'})
         .then(r => r.ok ? r.json() : null)
         .then(data => {
           const el = document.getElementById('last-refresh');
@@ -165,7 +181,6 @@
           if (el) el.textContent = 'not yet refreshed';
         });
     </script>
-
 
     <div class="footer">
       <div class="meta">
